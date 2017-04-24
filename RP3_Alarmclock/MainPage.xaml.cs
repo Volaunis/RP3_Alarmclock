@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RP3_Alarmclock.Helpers;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,28 @@ namespace RP3_Alarmclock
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private DispatcherTimer _timer;
+
         public MainPage()
         {
             this.InitializeComponent();
+
+
+            _timer = new DispatcherTimer();
+            _timer.Tick += ClockEvent;
+            _timer.Interval = new TimeSpan(0, 0, 1);
+            _timer.Start();
         }
+
+        private void tblClock_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+
+        }
+
+        private void ClockEvent(object sender, object e)
+        {
+            tblClock.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
     }
 }
