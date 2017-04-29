@@ -46,34 +46,30 @@ namespace RP3_Alarmclock
             _mainGrid.Height = 480;
 
             Content = _mainGrid;
-
-            //var border = new Border();
-            //border.HorizontalAlignment = HorizontalAlignment.Left;
-            //border.VerticalAlignment = VerticalAlignment.Top;
-
-            //border.Margin = new Thickness(393, 10, 0, 0);
-            //border.Background = new SolidColorBrush(Colors.Red);
-
-            //border.Width = 397;
-            //border.Height = 123;
+            
+            //var textBlock = ControlHelper.CreateTextBlock(393, 10, 397, 123, new SolidColorBrush(Colors.Red), new SolidColorBrush(Colors.White), "");
+            //textBlock.control.KeyDown += tblClock_KeyDown;
+            //_mainGrid.Children.Add(textBlock.border);
+            //tblClock = textBlock.control as TextBlock;
 
 
-            //_mainGrid.Children.Add(border);
+            var textBlock1 = ControlHelper.CreateTextBlock(0, 0, 200,160, new SolidColorBrush(Colors.Green), new SolidColorBrush(Colors.White), "1");
+            _mainGrid.Children.Add(textBlock1.border);
 
-            //tblClock = new TextBlock();
-            //tblClock.Text = "";
-            //tblClock.Width = 397;
-            //tblClock.Height = 123;
-            //tblClock.FontSize = 80;
-            //tblClock.Padding = new Thickness(46, 0, 0, 0);
-            //tblClock.KeyDown += TblClock_KeyDown;
+            var textBlock2 = ControlHelper.CreateTextBlock(0, 160, 200,160, new SolidColorBrush(Colors.Yellow), new SolidColorBrush(Colors.White), "2");
+            _mainGrid.Children.Add(textBlock2.border);
 
-            //border.Child = tblClock;
+            var textBlock3 = ControlHelper.CreateTextBlock(0, 320, 200,160, new SolidColorBrush(Colors.Blue), new SolidColorBrush(Colors.White), "3");
+            _mainGrid.Children.Add(textBlock3.border);
 
-            var textBlock = ControlHelper.CreateTextBlock(393, 10, 397, 123, new SolidColorBrush(Colors.Red), new SolidColorBrush(Colors.White), "");
-            textBlock.control.KeyDown += tblClock_KeyDown;
-            _mainGrid.Children.Add(textBlock.border);
+            var textBlock1a = ControlHelper.CreateTextBlock(200, 0, 200,160, new SolidColorBrush(Colors.Green), new SolidColorBrush(Colors.White), "1");
+            _mainGrid.Children.Add(textBlock1a.border);
 
+            var textBlock1b = ControlHelper.CreateTextBlock(400, 0, 200,160, new SolidColorBrush(Colors.Green), new SolidColorBrush(Colors.White), "1");
+            _mainGrid.Children.Add(textBlock1b.border);
+
+            var textBlock1c = ControlHelper.CreateTextBlock(600, 0, 200,160, new SolidColorBrush(Colors.Green), new SolidColorBrush(Colors.White), "1");
+            _mainGrid.Children.Add(textBlock1c.border);
 
         }
 
@@ -89,7 +85,7 @@ namespace RP3_Alarmclock
 
         private void ClockEvent(object sender, object e)
         {
-            ((TextBlock)sender).Text = DateTime.Now.ToString("HH:mm:ss");
+            //tblClock.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
     }
