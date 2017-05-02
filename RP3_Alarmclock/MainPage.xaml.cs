@@ -1,4 +1,5 @@
 ﻿using RP3_Alarmclock.Helpers;
+using RP3_Alarmclock.Modules;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -46,30 +47,33 @@ namespace RP3_Alarmclock
             _mainGrid.Height = 480;
 
             Content = _mainGrid;
-            
+
             //var textBlock = ControlHelper.CreateTextBlock(393, 10, 397, 123, new SolidColorBrush(Colors.Red), new SolidColorBrush(Colors.White), "");
             //textBlock.control.KeyDown += tblClock_KeyDown;
             //_mainGrid.Children.Add(textBlock.border);
             //tblClock = textBlock.control as TextBlock;
 
 
-            var textBlock1 = ControlHelper.CreateTextBlock(0, 0, 200,160, new SolidColorBrush(Colors.Green), new SolidColorBrush(Colors.White), "1");
-            _mainGrid.Children.Add(textBlock1.border);
+            //var textBlock1 = ControlHelper.CreateTextBlock(0, 0, 200,160, new SolidColorBrush(Colors.Green), new SolidColorBrush(Colors.White), "1");
+            //_mainGrid.Children.Add(textBlock1.border);
 
-            var textBlock2 = ControlHelper.CreateTextBlock(0, 160, 200,160, new SolidColorBrush(Colors.Yellow), new SolidColorBrush(Colors.White), "2");
-            _mainGrid.Children.Add(textBlock2.border);
+            //var textBlock2 = ControlHelper.CreateTextBlock(0, 160, 200,160, new SolidColorBrush(Colors.Yellow), new SolidColorBrush(Colors.White), "2");
+            //_mainGrid.Children.Add(textBlock2.border);
 
-            var textBlock3 = ControlHelper.CreateTextBlock(0, 320, 200,160, new SolidColorBrush(Colors.Blue), new SolidColorBrush(Colors.White), "3");
-            _mainGrid.Children.Add(textBlock3.border);
+            //var textBlock3 = ControlHelper.CreateTextBlock(0, 320, 200,160, new SolidColorBrush(Colors.Blue), new SolidColorBrush(Colors.White), "3");
+            //_mainGrid.Children.Add(textBlock3.border);
 
-            var textBlock1a = ControlHelper.CreateTextBlock(200, 0, 200,160, new SolidColorBrush(Colors.Green), new SolidColorBrush(Colors.White), "1");
-            _mainGrid.Children.Add(textBlock1a.border);
+            //var textBlock1a = ControlHelper.CreateTextBlock(200, 0, 200,160, new SolidColorBrush(Colors.Green), new SolidColorBrush(Colors.White), "1");
+            //_mainGrid.Children.Add(textBlock1a.border);
 
-            var textBlock1b = ControlHelper.CreateTextBlock(400, 0, 200,160, new SolidColorBrush(Colors.Green), new SolidColorBrush(Colors.White), "1");
-            _mainGrid.Children.Add(textBlock1b.border);
+            //var textBlock1b = ControlHelper.CreateTextBlock(400, 0, 200,160, new SolidColorBrush(Colors.Green), new SolidColorBrush(Colors.White), "1");
+            //_mainGrid.Children.Add(textBlock1b.border);
 
-            var textBlock1c = ControlHelper.CreateTextBlock(600, 0, 200,160, new SolidColorBrush(Colors.Green), new SolidColorBrush(Colors.White), "1");
-            _mainGrid.Children.Add(textBlock1c.border);
+            //var textBlock1c = ControlHelper.CreateTextBlock(600, 0, 200,160, new SolidColorBrush(Colors.Green), new SolidColorBrush(Colors.White), "1");
+            //_mainGrid.Children.Add(textBlock1c.border);
+
+            var clockModule = new ClockModule(1, 0, _mainGrid);
+            var weatherModule = new WeatherModule(1, 1, _mainGrid);
 
         }
 

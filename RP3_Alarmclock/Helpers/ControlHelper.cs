@@ -12,7 +12,7 @@ namespace RP3_Alarmclock.Helpers
 {
     public static class ControlHelper
     {
-        public static ControlInfo CreateTextBlock(int offsetLeft, int offsetTop, int width, int height, SolidColorBrush backgroundColor, SolidColorBrush foregroundColor, string text)
+        public static ControlInfo CreateTextBlock(int offsetLeft, int offsetTop, int width, int height, SolidColorBrush foreground, SolidColorBrush background)
         {
             var borderWidth = 5;
 
@@ -23,18 +23,17 @@ namespace RP3_Alarmclock.Helpers
             border.VerticalAlignment = VerticalAlignment.Top;
 
             border.Margin = new Thickness(offsetLeft+borderWidth, offsetTop+borderWidth, 0, 0);
-            border.Background = backgroundColor;
+            border.Background = background;
 
             border.Width = width- borderWidth;
             border.Height = height-borderWidth;
 
             var textBlock = new TextBlock();
-            textBlock.Text = text;
             textBlock.Width = width-borderWidth;
             textBlock.Height = height-borderWidth;
             textBlock.FontSize = 80;
             textBlock.Padding = new Thickness(46, 0, 0, 0);
-            textBlock.Foreground = foregroundColor;
+            textBlock.Foreground = foreground;
 
             border.Child = textBlock;
 
