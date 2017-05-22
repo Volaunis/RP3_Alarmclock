@@ -103,7 +103,9 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\AlarmEvent.cs" />
     <Compile Include="Models\Weather.cs" />
+    <Compile Include="Modules\AlarmModule.cs" />
     <Compile Include="Modules\BaseModule.cs" />
     <Compile Include="Modules\ClockModule.cs" />
     <Compile Include="Modules\TextModule.cs" />
