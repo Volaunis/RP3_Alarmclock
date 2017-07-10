@@ -22,15 +22,15 @@ namespace RP3_Alarmclock.Helpers
             border.HorizontalAlignment = HorizontalAlignment.Left;
             border.VerticalAlignment = VerticalAlignment.Top;
 
-            border.Margin = new Thickness(offsetLeft+borderWidth, offsetTop+borderWidth, 0, 0);
+            border.Margin = new Thickness(offsetLeft + borderWidth, offsetTop + borderWidth, borderWidth, borderWidth);
             border.Background = background;
 
-            border.Width = width- borderWidth;
-            border.Height = height-borderWidth;
+            border.Width = width - borderWidth;
+            border.Height = height - borderWidth;
 
             var textBlock = new TextBlock();
-            textBlock.Width = width-borderWidth;
-            textBlock.Height = height-borderWidth;
+            textBlock.Width = width - borderWidth;
+            textBlock.Height = height - borderWidth;
             textBlock.FontSize = 80;
             textBlock.Padding = new Thickness(46, 0, 0, 0);
             textBlock.Foreground = foreground;

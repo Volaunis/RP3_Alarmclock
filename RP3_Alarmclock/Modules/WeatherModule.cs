@@ -1,7 +1,10 @@
 ﻿using System;
+using Windows.Storage;
 using Windows.UI;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
+using RP3_Alarmclock.Helpers;
+using RP3_Alarmclock.Models;
 
 namespace RP3_Alarmclock.Modules
 {
@@ -11,11 +14,15 @@ namespace RP3_Alarmclock.Modules
 
         public void UpdateWeather(object sender, object e)
         {
-            //var data = 
+            var jsonText = DebugHelper.ExampleWeather().Result;
+            var data = JsonHelper.Deserialize<WeatherBase>(jsonText);
+            var textBlock = controlInfo.control as TextBlock;
+            //textBlock.Text = data.weather[0].description;
+            
         }
 
 
-        public WeatherModule(int x, int y, Grid maingrid) : base(x,y,2,2,new SolidColorBrush(Colors.Black),new SolidColorBrush(Colors.White),maingrid)
+        public WeatherModule(int x, int y, Grid maingrid) : base(x, y, 2, 2, new SolidColorBrush(Colors.Black), new SolidColorBrush(Colors.White), maingrid)
         {
             UpdateWeather(null, null); // Inital run, since this timer only runs every 20 minutes
             InitTimer(new TimeSpan(0, 0, 20, 0, 0), UpdateWeather);

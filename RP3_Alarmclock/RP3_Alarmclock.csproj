@@ -90,7 +90,39 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <None Include="Example1.json" />
+    <Content Include="Example1.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Weather\1498788342_weather-icons-cloudy-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Weather\1498788348_weather-icons-sunny.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Weather\1498788351_weather-icons-snowy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Weather\1498788354_weather-icons-cloudy-3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Weather\1498788357_weather-icons-cloudy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Weather\1498788360_weather-icons-rainy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Weather\1498788364_weather-icons-rainy-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Weather\1498788367_weather-icons-stormy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Weather\1498788370_weather-icons-night-clear.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Weather\1498788373_weather-icons-night-cloudy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +132,7 @@
     <Compile Include="Helpers\ClockHelper.cs" />
     <Compile Include="Helpers\ConfigHelper.cs" />
     <Compile Include="Helpers\ControlHelper.cs" />
+    <Compile Include="Helpers\DebugHelper.cs" />
     <Compile Include="Helpers\JsonHelper.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -108,7 +141,8 @@
     <Compile Include="Models\Weather.cs" />
     <Compile Include="Modules\AlarmModule.cs" />
     <Compile Include="Modules\BaseModule.cs" />
-    <Compile Include="Modules\ClockModule.cs" />
+    <Compile Include="Modules\DateModule.cs" />
+    <Compile Include="Modules\TimeModule.cs" />
     <Compile Include="Modules\TextModule.cs" />
     <Compile Include="Modules\TimerModule.cs" />
     <Compile Include="Modules\WeatherModule.cs" />

@@ -25,55 +25,29 @@ namespace RP3_Alarmclock
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private DispatcherTimer _timer;
-
-        private Grid _mainGrid;
-
-        private TextBlock tblClock;
-
         public MainPage()
         {
             this.InitializeComponent();
-
-
-            _timer = new DispatcherTimer();
-            _timer.Tick += ClockEvent;
-            _timer.Interval = new TimeSpan(0, 0, 1);
-            _timer.Start();
-
-            _mainGrid = new Grid();
-            _mainGrid.Background = new SolidColorBrush(Colors.Black);
-            _mainGrid.Width = 800;
-            _mainGrid.Height = 480;
-
+            var _mainGrid = new Grid()
+            {
+                Background = new SolidColorBrush(Colors.Black),
+                Width = 800,
+                Height = 480
+            };
             Content = _mainGrid;
 
-            //var textBlock = ControlHelper.CreateTextBlock(393, 10, 397, 123, new SolidColorBrush(Colors.Red), new SolidColorBrush(Colors.White), "");
-            //textBlock.control.KeyDown += tblClock_KeyDown;
-            //_mainGrid.Children.Add(textBlock.border);
-            //tblClock = textBlock.control as TextBlock;
+            var timeModule = new TimeModule(0, 0, _mainGrid);
+            var dateModule = new DateModule(0, 1, _mainGrid);
+            var AlarmModule = new AlarmModule(2, 0, _mainGrid);
+            var weatherModule = new WeatherModule(2, 1, _mainGrid);
 
 
-            //var textBlock1 = ControlHelper.CreateTextBlock(0, 0, 200,160, new SolidColorBrush(Colors.Green), new SolidColorBrush(Colors.White), "1");
-            //_mainGrid.Children.Add(textBlock1.border);
-
-            //var textBlock2 = ControlHelper.CreateTextBlock(0, 160, 200,160, new SolidColorBrush(Colors.Yellow), new SolidColorBrush(Colors.White), "2");
-            //_mainGrid.Children.Add(textBlock2.border);
-
-            //var textBlock3 = ControlHelper.CreateTextBlock(0, 320, 200,160, new SolidColorBrush(Colors.Blue), new SolidColorBrush(Colors.White), "3");
-            //_mainGrid.Children.Add(textBlock3.border);
-
-            //var textBlock1a = ControlHelper.CreateTextBlock(200, 0, 200,160, new SolidColorBrush(Colors.Green), new SolidColorBrush(Colors.White), "1");
-            //_mainGrid.Children.Add(textBlock1a.border);
-
-            //var textBlock1b = ControlHelper.CreateTextBlock(400, 0, 200,160, new SolidColorBrush(Colors.Green), new SolidColorBrush(Colors.White), "1");
-            //_mainGrid.Children.Add(textBlock1b.border);
-
-            //var textBlock1c = ControlHelper.CreateTextBlock(600, 0, 200,160, new SolidColorBrush(Colors.Green), new SolidColorBrush(Colors.White), "1");
-            //_mainGrid.Children.Add(textBlock1c.border);
-
-            var clockModule = new ClockModule(1, 0, _mainGrid);
-            var weatherModule = new WeatherModule(1, 1, _mainGrid);
+            //var textModule1 = new TextModule(2, 0, 1, 1, "1", new SolidColorBrush(Colors.White), new SolidColorBrush(Colors.Green), _mainGrid);
+            //var textModule2 = new TextModule(3, 0, 1, 1, "2", new SolidColorBrush(Colors.White), new SolidColorBrush(Colors.LightBlue), _mainGrid);
+            //var textModule3 = new TextModule(0, 1, 1, 1, "3", new SolidColorBrush(Colors.White), new SolidColorBrush(Colors.Orange), _mainGrid);
+            //var textModule4 = new TextModule(1, 1, 1, 1, "4", new SolidColorBrush(Colors.White), new SolidColorBrush(Colors.Teal), _mainGrid);
+            var textModule5 = new TextModule(0, 2, 1, 1, "5", new SolidColorBrush(Colors.White), new SolidColorBrush(Colors.Purple), _mainGrid);
+            var textModule6 = new TextModule(1, 2, 1, 1, "6", new SolidColorBrush(Colors.White), new SolidColorBrush(Colors.Gray), _mainGrid);
 
         }
 
@@ -86,11 +60,5 @@ namespace RP3_Alarmclock
         {
 
         }
-
-        private void ClockEvent(object sender, object e)
-        {
-            //tblClock.Text = DateTime.Now.ToString("HH:mm:ss");
-        }
-
     }
 }

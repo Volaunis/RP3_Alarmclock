@@ -12,6 +12,8 @@ namespace RP3_Alarmclock.Modules
     {
         public TextModule(int x, int y, int width, int height, string text, SolidColorBrush foreground, SolidColorBrush background, Grid maingrid) : base(x, y, width, height, foreground, background, maingrid)
         {
+            var textBlock = controlInfo.control as TextBlock;
+            textBlock.Text = text;
 
         }
     }
