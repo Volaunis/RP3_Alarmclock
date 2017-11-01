@@ -1,0 +1,42 @@
+﻿{
+  "coord": {
+    "lon": 12.5,
+    "lat": 55.93
+  },
+  "weather": [
+    {
+      "id": 500,
+      "main": "Rain",
+      "description": "light rain",
+      "icon": "10n"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 288.15,
+    "pressure": 1008,
+    "humidity": 93,
+    "temp_min": 287.15,
+    "temp_max": 289.15
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 3.1,
+    "deg": 250
+  },
+  "clouds": {
+    "all": 75
+  },
+  "dt": 1499718000,
+  "sys": {
+    "type": 1,
+    "id": 5245,
+    "message": 0.0029,
+    "country": "DK",
+    "sunrise": 1499654382,
+    "sunset": 1499716229
+  },
+  "id": 2616450,
+  "name": "Niva",
+  "cod": 200
+}

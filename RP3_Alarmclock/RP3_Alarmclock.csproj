@@ -90,39 +90,42 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Documentation\Links.txt" />
     <Content Include="Example1.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\Weather\1498788342_weather-icons-cloudy-2.png">
+    <Content Include="Resources\Images\Weather\Cloudy2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\Weather\1498788348_weather-icons-sunny.png">
+    <Content Include="Resources\Images\Weather\Sunny.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\Weather\1498788351_weather-icons-snowy.png">
+    <Content Include="Resources\Images\Weather\Snowy.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\Weather\1498788354_weather-icons-cloudy-3.png">
+    <Content Include="Resources\Images\Weather\Cloudy3.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\Weather\1498788357_weather-icons-cloudy.png">
+    <Content Include="Resources\Images\Weather\Cloudy.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\Weather\1498788360_weather-icons-rainy.png">
+    <Content Include="Resources\Images\Weather\Rainy.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\Weather\1498788364_weather-icons-rainy-2.png">
+    <Content Include="Resources\Images\Weather\Rainy2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\Weather\1498788367_weather-icons-stormy.png">
+    <Content Include="Resources\Images\Weather\Stormy.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\Weather\1498788370_weather-icons-night-clear.png">
+    <Content Include="Resources\Images\Weather\NightClear.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\Weather\1498788373_weather-icons-night-cloudy.png">
+    <Content Include="Resources\Images\Weather\NightCloudy.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Images\Weather\Compass.png" />
+    <None Include="Example2.json" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -134,6 +137,7 @@
     <Compile Include="Helpers\ControlHelper.cs" />
     <Compile Include="Helpers\DebugHelper.cs" />
     <Compile Include="Helpers\JsonHelper.cs" />
+    <Compile Include="Helpers\WeatherHelper.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

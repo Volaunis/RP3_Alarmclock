@@ -10,7 +10,7 @@ namespace RP3_Alarmclock.Modules
 {
     class WeatherModule : TimerModule
     {
-        private string ApiUrl = "api.openweathermap.org/data/2.5/weather?id={0}&APPID={1}";
+        private string ApiUrl = "api.openweathermap.org/data/2.5/weather?units=metric&id={0}&APPID={1}";
 
         public void UpdateWeather(object sender, object e)
         {

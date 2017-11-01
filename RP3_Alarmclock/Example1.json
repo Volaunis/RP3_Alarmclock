@@ -24,7 +24,9 @@
     "speed": 5.7,
     "deg": 80
   },
-  "clouds": { "all": 0 },
+  "clouds": {
+    "all": 0
+  },
   "dt": 1493758200,
   "sys": {
     "type": 1,

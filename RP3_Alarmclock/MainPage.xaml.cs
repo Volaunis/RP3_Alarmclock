@@ -38,7 +38,7 @@ namespace RP3_Alarmclock
 
             var timeModule = new TimeModule(0, 0, _mainGrid);
             var dateModule = new DateModule(0, 1, _mainGrid);
-            var AlarmModule = new AlarmModule(2, 0, _mainGrid);
+            var alarmModule = new AlarmModule(2, 0, _mainGrid);
             var weatherModule = new WeatherModule(2, 1, _mainGrid);
 
 
