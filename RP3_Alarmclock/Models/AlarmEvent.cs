@@ -1,16 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RP3_Alarmclock.Models
 {
-    class AlarmEvent
+    public enum AlarmStatus
     {
-        public TimeSpan RunAt { get; set; }
-        public DateTime NextRunAt { get; set; }
-        public string Name { get; set; }
+        None,
+        NotStarted,
+        Running,
+        Completed
+    }
 
+    public class AlarmEvent
+    {
+        public long Id { get; set; }
+        public string Name { get; set; }
+        public DateTime RunAt { get; set; }
+        public AlarmStatus Status { get; set; }
+        public long PlannedEventId { get; set; }
     }
 }

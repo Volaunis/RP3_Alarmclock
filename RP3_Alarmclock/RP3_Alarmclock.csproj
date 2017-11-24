@@ -132,6 +132,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\AlarmHelper.cs" />
     <Compile Include="Helpers\ClockHelper.cs" />
     <Compile Include="Helpers\ConfigHelper.cs" />
     <Compile Include="Helpers\ControlHelper.cs" />
@@ -142,6 +143,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\AlarmEvent.cs" />
+    <Compile Include="Models\PlannedEvent.cs" />
     <Compile Include="Models\Weather.cs" />
     <Compile Include="Modules\AlarmModule.cs" />
     <Compile Include="Modules\BaseModule.cs" />

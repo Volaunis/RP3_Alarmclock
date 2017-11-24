@@ -23,8 +23,11 @@ namespace RP3_Alarmclock.Helpers
         public static WindDirections WindDirection(int direction)
         {
             if(direction>292)
+            {
 
+            }
 
+            return WindDirections.East;
         }
     }
 }
