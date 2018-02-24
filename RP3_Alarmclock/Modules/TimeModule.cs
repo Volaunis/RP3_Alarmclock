@@ -17,7 +17,7 @@ namespace RP3_Alarmclock.Modules
             textBlock.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
-        public TimeModule(int x, int y, Grid maingrid) : base(x, y, 2, 1, new SolidColorBrush(Colors.White), new SolidColorBrush(Colors.Red), maingrid)
+        public TimeModule(int x, int y, Grid maingrid) : base(ModuleType.Text, x, y, 2, 1, new SolidColorBrush(Colors.White), new SolidColorBrush(Colors.Red), maingrid)
         {
             InitTimer(new TimeSpan(0, 0, 0, 0, 250), UpdateTime);
         }

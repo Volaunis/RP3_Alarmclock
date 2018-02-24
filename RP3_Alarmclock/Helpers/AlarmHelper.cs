@@ -11,7 +11,7 @@ namespace RP3_Alarmclock.Helpers
     {
         public static List<AlarmEvent> GetAlarmEvents()
         {
-
+            return null;
         }
     }
 }

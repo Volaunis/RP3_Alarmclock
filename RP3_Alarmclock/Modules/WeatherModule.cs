@@ -14,16 +14,26 @@ namespace RP3_Alarmclock.Modules
 
         public void UpdateWeather(object sender, object e)
         {
-            var jsonText = DebugHelper.ExampleWeather().Result;
-            var data = JsonHelper.Deserialize<WeatherBase>(jsonText);
-            var textBlock = controlInfo.control as TextBlock;
+            var jsonText = DebugHelper.ExampleWeather();
+            var data = JsonHelper.Deserialize<WeatherBase>(jsonText.Result);
+
+
+
+            //var textBlock = controlInfo.control as TextBlock;
             //textBlock.Text = data.weather[0].description;
             
         }
 
 
-        public WeatherModule(int x, int y, Grid maingrid) : base(x, y, 2, 2, new SolidColorBrush(Colors.Black), new SolidColorBrush(Colors.White), maingrid)
+        public WeatherModule(int x, int y, Grid maingrid) : base(ModuleType.Canvas, x, y, 2, 2, new SolidColorBrush(Colors.Black), new SolidColorBrush(Colors.White), maingrid)
         {
+            var canvas = controlInfo.control as Canvas;
+
+            var tb = new TextBlock();
+            tb.Text = "tst";
+            canvas.Children.Add(tb);
+
+
             UpdateWeather(null, null); // Inital run, since this timer only runs every 20 minutes
             InitTimer(new TimeSpan(0, 0, 20, 0, 0), UpdateWeather);
         }

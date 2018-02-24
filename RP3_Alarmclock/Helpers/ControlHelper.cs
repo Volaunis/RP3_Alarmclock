@@ -18,15 +18,7 @@ namespace RP3_Alarmclock.Helpers
 
             var ret = new ControlInfo();
 
-            var border = new Border();
-            border.HorizontalAlignment = HorizontalAlignment.Left;
-            border.VerticalAlignment = VerticalAlignment.Top;
-
-            border.Margin = new Thickness(offsetLeft + borderWidth, offsetTop + borderWidth, borderWidth, borderWidth);
-            border.Background = background;
-
-            border.Width = width - borderWidth;
-            border.Height = height - borderWidth;
+            var border = CreateBorder(offsetLeft, offsetTop, width, height, background, borderWidth);
 
             var textBlock = new TextBlock();
             textBlock.Width = width - borderWidth;
@@ -41,6 +33,40 @@ namespace RP3_Alarmclock.Helpers
             ret.control = textBlock;
 
             return ret;
+        }
+
+        public static ControlInfo CreateCanvas(int offsetLeft, int offsetTop, int width, int height, SolidColorBrush foreground, SolidColorBrush background)
+        {
+            var borderWidth = 5;
+
+            var ret = new ControlInfo();
+
+            var border = CreateBorder(offsetLeft, offsetTop, width, height, background, borderWidth);
+
+            var canvas = new Canvas();
+            canvas.Width = width - borderWidth;
+            canvas.Height = height - borderWidth;
+            
+            border.Child = canvas;
+
+            ret.border = border;
+            ret.control = canvas;
+
+            return ret;
+        }
+
+        private static Border CreateBorder(int offsetLeft, int offsetTop, int width, int height, SolidColorBrush background, int borderWidth)
+        {
+            var border = new Border();
+            border.HorizontalAlignment = HorizontalAlignment.Left;
+            border.VerticalAlignment = VerticalAlignment.Top;
+
+            border.Margin = new Thickness(offsetLeft + borderWidth, offsetTop + borderWidth, borderWidth, borderWidth);
+            border.Background = background;
+
+            border.Width = width - borderWidth;
+            border.Height = height - borderWidth;
+            return border;
         }
     }
 

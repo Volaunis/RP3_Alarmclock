@@ -13,7 +13,7 @@ namespace RP3_Alarmclock.Modules
     {
         private DispatcherTimer _timer;
 
-        public TimerModule(int x, int y, int width, int height, SolidColorBrush foreground, SolidColorBrush background, Grid maingrid) : base(x, y, width, height, foreground, background, maingrid)
+        public TimerModule(ModuleType type, int x, int y, int width, int height, SolidColorBrush foreground, SolidColorBrush background, Grid maingrid) : base(type, x, y, width, height, foreground, background, maingrid)
         {
         }
 
